@@ -1,0 +1,507 @@
+{
+  "id": "macos14-chrome-151-m3max",
+  "label": "macOS 14 / Chrome 151 (M3 Max)",
+  "os": "macos",
+  "osVersion": "14.5",
+  "browser": "chrome",
+  "browserVersion": "151",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+  "platform": "MacIntel",
+  "userAgentData": {
+    "brands": [
+      {
+        "brand": "Google Chrome",
+        "version": "151"
+      },
+      {
+        "brand": "Chromium",
+        "version": "151"
+      },
+      {
+        "brand": "Not.A/Brand",
+        "version": "24"
+      }
+    ],
+    "mobile": false,
+    "platform": "macOS",
+    "architecture": "",
+    "bitness": "",
+    "model": "",
+    "platformVersion": "14.5",
+    "uaFullVersion": "151.0.0.0",
+    "fullVersionList": [
+      {
+        "brand": "Google Chrome",
+        "version": "151.0.0.0"
+      },
+      {
+        "brand": "Chromium",
+        "version": "151.0.0.0"
+      },
+      {
+        "brand": "Not.A/Brand",
+        "version": "24.0.0.0"
+      }
+    ],
+    "wow64": false
+  },
+  "languages": [
+    "en-US"
+  ],
+  "timezone": {
+    "id": "America/New_York",
+    "offsetMinutes": 240,
+    "locale": "en-US"
+  },
+  "screen": {
+    "width": 3024,
+    "height": 1964,
+    "availWidth": 3024,
+    "availHeight": 1924,
+    "colorDepth": 24,
+    "pixelDepth": 24,
+    "orientation": {
+      "angle": 0,
+      "type": "landscape-primary"
+    }
+  },
+  "window": {
+    "innerWidth": 3024,
+    "innerHeight": 1844,
+    "outerWidth": 3024,
+    "outerHeight": 1964,
+    "devicePixelRatio": 2,
+    "screenX": 0,
+    "screenY": 0
+  },
+  "hardware": {
+    "hardwareConcurrency": 16,
+    "deviceMemory": 64
+  },
+  "navigator": {
+    "vendor": "Google Inc.",
+    "vendorSub": "",
+    "product": "Gecko",
+    "productSub": "20030107",
+    "appName": "Netscape",
+    "appCodeName": "Mozilla",
+    "appVersion": "(Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+    "cookieEnabled": true,
+    "doNotTrack": "1",
+    "maxTouchPoints": 0,
+    "pdfViewerEnabled": true,
+    "webdriver": false,
+    "connection": {
+      "effectiveType": "4g",
+      "downlink": 10,
+      "rtt": 50,
+      "saveData": false
+    },
+    "plugins": [
+      {
+        "name": "PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "Portable Document Format",
+        "mimeTypes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Chrome PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      },
+      {
+        "name": "Chromium PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      },
+      {
+        "name": "Microsoft Edge PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      },
+      {
+        "name": "WebKit built-in PDF",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      }
+    ],
+    "mimeTypes": [
+      {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format"
+      }
+    ]
+  },
+  "gpu": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+    "unmaskedVendor": "Google Inc. (Apple)",
+    "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Max, Unspecified Version)",
+    "maxTextureSize": 16384,
+    "maxViewportDims": [
+      16384,
+      16384
+    ],
+    "maxRenderBufferSize": 16384,
+    "maxVertexAttribs": 16,
+    "maxVaryingVectors": 30,
+    "maxVertexUniformVectors": 4096,
+    "maxFragmentUniformVectors": 1024,
+    "aliasedLineWidthRange": [
+      1,
+      1
+    ],
+    "aliasedPointSizeRange": [
+      1,
+      1024
+    ],
+    "maxCombinedTextureImageUnits": 32,
+    "maxCubeMapTextureSize": 16384,
+    "maxTextureImageUnits": 16,
+    "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES Shading Language, WebGL Specification)",
+    "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+    "antialias": true,
+    "extensions": [
+      "ANGLE_instanced_arrays",
+      "EXT_blend_minmax",
+      "EXT_color_buffer_half_float",
+      "EXT_disjoint_timer_query",
+      "EXT_float_blend",
+      "EXT_frag_depth",
+      "EXT_shader_texture_lod",
+      "EXT_texture_compression_bptc",
+      "EXT_texture_compression_rgtc",
+      "EXT_texture_filter_anisotropic",
+      "EXT_sRGB",
+      "OES_element_index_uint",
+      "OES_fbo_render_mipmap",
+      "OES_standard_derivatives",
+      "OES_texture_float",
+      "OES_texture_float_linear",
+      "OES_texture_half_float",
+      "OES_texture_half_float_linear",
+      "OES_vertex_array_object",
+      "WEBGL_color_buffer_float",
+      "WEBGL_compressed_texture_s3tc",
+      "WEBGL_compressed_texture_s3tc_srgb",
+      "WEBGL_debug_renderer_info",
+      "WEBGL_debug_shaders",
+      "WEBGL_depth_texture",
+      "WEBGL_draw_buffers",
+      "WEBGL_lose_context",
+      "WEBGL_multi_draw"
+    ]
+  },
+  "fonts": {
+    "fonts": [
+      "Arial",
+      "Avenir",
+      "Avenir Next",
+      "Comic Sans MS",
+      "Courier New",
+      "Geneva",
+      "Georgia",
+      "Helvetica",
+      "Helvetica Neue",
+      "Lucida Grande",
+      "Menlo",
+      "Monaco",
+      "Optima",
+      "Palatino",
+      "Times",
+      "Times New Roman",
+      "Trebuchet MS",
+      "Verdana"
+    ],
+    "detectionFonts": [
+      {
+        "family": "Helvetica",
+        "present": true
+      },
+      {
+        "family": "Helvetica Neue",
+        "present": true
+      },
+      {
+        "family": "Menlo",
+        "present": true
+      },
+      {
+        "family": "Segoe UI",
+        "present": false
+      },
+      {
+        "family": "Calibri",
+        "present": false
+      },
+      {
+        "family": "Consolas",
+        "present": false
+      }
+    ]
+  },
+  "mediaDevices": [
+    {
+      "kind": "audioinput",
+      "label": "MacBook Pro Microphone",
+      "deviceId": "24cf05e88212d660903b95a23c4b3c6ef6c0364e539558f6c4d89bc8e810d47c",
+      "groupId": "f839d9d7a8dde28f236b27cc25689354405ccf5eda2a8a2acb7f4a300193b1c6"
+    },
+    {
+      "kind": "audiooutput",
+      "label": "MacBook Pro Speakers",
+      "deviceId": "17c29be7389d93b3caa3b50fe1d4f469fa8c486e1f961817664a8a52be6911e7",
+      "groupId": "f839d9d7a8dde28f236b27cc25689354405ccf5eda2a8a2acb7f4a300193b1c6"
+    },
+    {
+      "kind": "videoinput",
+      "label": "FaceTime HD Camera (Built-in)",
+      "deviceId": "c5cc2167e0fe83f4fc8774e09634ac269a2b3aa283ae26879b6a072cea38d0de",
+      "groupId": "7dd4a215b09717ee31b1e3a91f28031293379de5904abe122769d9ba8149b049"
+    }
+  ],
+  "speechVoices": [
+    {
+      "name": "Samantha",
+      "lang": "en-US",
+      "localService": true,
+      "default": true,
+      "voiceURI": "Samantha"
+    },
+    {
+      "name": "Alex",
+      "lang": "en-US",
+      "localService": true,
+      "default": false,
+      "voiceURI": "Alex"
+    },
+    {
+      "name": "Daniel",
+      "lang": "en-GB",
+      "localService": true,
+      "default": false,
+      "voiceURI": "Daniel"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "notifications",
+      "state": "prompt"
+    },
+    {
+      "name": "geolocation",
+      "state": "prompt"
+    },
+    {
+      "name": "camera",
+      "state": "prompt"
+    },
+    {
+      "name": "microphone",
+      "state": "prompt"
+    },
+    {
+      "name": "persistent-storage",
+      "state": "prompt"
+    }
+  ],
+  "geolocation": {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "accuracy": 24.5,
+    "altitude": null,
+    "altitudeAccuracy": null,
+    "heading": null,
+    "speed": null
+  },
+  "battery": {
+    "charging": false,
+    "chargingTime": null,
+    "dischargingTime": 12600,
+    "level": 0.83
+  },
+  "webrtc": {
+    "iceCandidatePolicy": "default",
+    "forceRelay": false,
+    "mangleSDP": true,
+    "fakeLocalIP": "192.168.18.119"
+  },
+  "canvas": {
+    "noiseSeed": 2042017,
+    "noiseStrength": 1
+  },
+  "audio": {
+    "noiseSeed": 2042018,
+    "sampleRate": 48000,
+    "noiseStrength": 0.0001
+  },
+  "math": {
+    "performanceNowResolutionMs": 0.0001
+  },
+  "tls": {
+    "clientHelloId": "HelloChrome_120",
+    "ja3": "e1d8b04eeb8ef3954ec4f49267a783ef",
+    "ja3Full": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513,29-23-24,0",
+    "ja4": "t13d1516h2_8daaf6152771_b0da82dd1658",
+    "cipherSuites": [
+      4865,
+      4866,
+      4867,
+      49195,
+      49199,
+      49196,
+      49200,
+      52393,
+      52392,
+      49171,
+      49172,
+      156,
+      157,
+      47,
+      53
+    ],
+    "extensions": [
+      0,
+      23,
+      65281,
+      10,
+      11,
+      35,
+      16,
+      5,
+      13,
+      18,
+      51,
+      45,
+      43,
+      27,
+      17513
+    ],
+    "curves": [
+      29,
+      23,
+      24
+    ],
+    "signatureAlgorithms": [
+      0
+    ],
+    "alpn": [
+      "h2",
+      "http/1.1"
+    ]
+  },
+  "http2": {
+    "settings": [
+      {
+        "id": 1,
+        "value": 65536
+      },
+      {
+        "id": 3,
+        "value": 1000
+      },
+      {
+        "id": 5,
+        "value": 16384
+      },
+      {
+        "id": 7,
+        "value": 6291456
+      },
+      {
+        "id": 9,
+        "value": 15663105
+      },
+      {
+        "id": 11,
+        "value": 1
+      },
+      {
+        "id": 13,
+        "value": 0
+      }
+    ],
+    "windowUpdate": 15663105,
+    "headerOrder": [
+      "host",
+      "connection",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "cookie"
+    ],
+    "pseudoHeaderOrder": [
+      ":method",
+      ":authority",
+      ":scheme",
+      ":path"
+    ],
+    "priority": [
+      {
+        "streamId": 0,
+        "weight": 256,
+        "exclusive": false,
+        "depStreamId": 0
+      }
+    ]
+  },
+  "httpHeaders": {
+    "order": [
+      "host",
+      "connection",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "cookie"
+    ],
+    "casing": {
+      "host": "Host",
+      "connection": "Connection",
+      "sec-ch-ua": "Sec-CH-UA",
+      "sec-ch-ua-mobile": "Sec-CH-UA-Mobile",
+      "sec-ch-ua-platform": "Sec-CH-UA-Platform",
+      "upgrade-insecure-requests": "Upgrade-Insecure-Requests",
+      "user-agent": "User-Agent",
+      "accept": "Accept",
+      "sec-fetch-site": "Sec-Fetch-Site",
+      "sec-fetch-mode": "Sec-Fetch-Mode",
+      "sec-fetch-user": "Sec-Fetch-User",
+      "sec-fetch-dest": "Sec-Fetch-Dest",
+      "accept-encoding": "Accept-Encoding",
+      "accept-language": "Accept-Language",
+      "cookie": "Cookie"
+    }
+  },
+  "proxy": null,
+  "createdAt": "2026-08-12T11:00:00.000Z",
+  "updatedAt": "2026-08-12T11:00:00.000Z"
+}

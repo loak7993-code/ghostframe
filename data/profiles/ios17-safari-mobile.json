@@ -1,0 +1,440 @@
+{
+  "id": "ios17-safari-mobile",
+  "label": "iOS 17 / Safari (iPhone 15)",
+  "os": "ios",
+  "osVersion": "17.2",
+  "browser": "safari",
+  "browserVersion": "17.2",
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+  "platform": "iPhone",
+  "userAgentData": {
+    "brands": [
+      {
+        "brand": "Safari",
+        "version": "17.2"
+      },
+      {
+        "brand": "Not.A/Brand",
+        "version": "8"
+      }
+    ],
+    "mobile": true,
+    "platform": "iOS",
+    "architecture": "",
+    "bitness": "",
+    "model": "iPhone15,3",
+    "platformVersion": "17.2",
+    "uaFullVersion": "17.2",
+    "fullVersionList": [
+      {
+        "brand": "Safari",
+        "version": "17.2"
+      },
+      {
+        "brand": "Not.A/Brand",
+        "version": "8.0.0.0"
+      }
+    ],
+    "wow64": false
+  },
+  "languages": [
+    "en-US"
+  ],
+  "timezone": {
+    "id": "America/New_York",
+    "offsetMinutes": 240,
+    "locale": "en-US"
+  },
+  "screen": {
+    "width": 393,
+    "height": 852,
+    "availWidth": 393,
+    "availHeight": 852,
+    "colorDepth": 24,
+    "pixelDepth": 24,
+    "orientation": {
+      "angle": 0,
+      "type": "portrait-primary"
+    }
+  },
+  "window": {
+    "innerWidth": 393,
+    "innerHeight": 852,
+    "outerWidth": 393,
+    "outerHeight": 852,
+    "devicePixelRatio": 3,
+    "screenX": 0,
+    "screenY": 0
+  },
+  "hardware": {
+    "hardwareConcurrency": 6,
+    "deviceMemory": 6
+  },
+  "navigator": {
+    "vendor": "Apple Computer, Inc.",
+    "vendorSub": "",
+    "product": "Gecko",
+    "productSub": "20030107",
+    "appName": "Netscape",
+    "appCodeName": "Mozilla",
+    "appVersion": "(iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+    "cookieEnabled": true,
+    "doNotTrack": "1",
+    "maxTouchPoints": 5,
+    "pdfViewerEnabled": false,
+    "webdriver": false,
+    "connection": {
+      "effectiveType": "4g",
+      "downlink": 10,
+      "rtt": 50,
+      "saveData": false
+    },
+    "plugins": [],
+    "mimeTypes": []
+  },
+  "gpu": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple A16, Unspecified Version)",
+    "unmaskedVendor": "Google Inc. (Apple)",
+    "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple A16, Unspecified Version)",
+    "maxTextureSize": 16384,
+    "maxViewportDims": [
+      16384,
+      16384
+    ],
+    "maxRenderBufferSize": 16384,
+    "maxVertexAttribs": 16,
+    "maxVaryingVectors": 30,
+    "maxVertexUniformVectors": 4096,
+    "maxFragmentUniformVectors": 1024,
+    "aliasedLineWidthRange": [
+      1,
+      1
+    ],
+    "aliasedPointSizeRange": [
+      1,
+      1024
+    ],
+    "maxCombinedTextureImageUnits": 32,
+    "maxCubeMapTextureSize": 16384,
+    "maxTextureImageUnits": 16,
+    "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES Shading Language, WebGL Specification)",
+    "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+    "antialias": true,
+    "extensions": [
+      "ANGLE_instanced_arrays",
+      "EXT_blend_minmax",
+      "EXT_color_buffer_half_float",
+      "EXT_disjoint_timer_query",
+      "EXT_float_blend",
+      "EXT_frag_depth",
+      "EXT_shader_texture_lod",
+      "EXT_texture_compression_bptc",
+      "EXT_texture_compression_rgtc",
+      "EXT_texture_filter_anisotropic",
+      "EXT_sRGB",
+      "OES_element_index_uint",
+      "OES_fbo_render_mipmap",
+      "OES_standard_derivatives",
+      "OES_texture_float",
+      "OES_texture_float_linear",
+      "OES_texture_half_float",
+      "OES_texture_half_float_linear",
+      "OES_vertex_array_object",
+      "WEBGL_color_buffer_float",
+      "WEBGL_compressed_texture_s3tc",
+      "WEBGL_compressed_texture_s3tc_srgb",
+      "WEBGL_debug_renderer_info",
+      "WEBGL_debug_shaders",
+      "WEBGL_depth_texture",
+      "WEBGL_draw_buffers",
+      "WEBGL_lose_context",
+      "WEBGL_multi_draw"
+    ]
+  },
+  "fonts": {
+    "fonts": [
+      "Arial",
+      "Avenir",
+      "Avenir Next",
+      "Courier New",
+      "Georgia",
+      "Helvetica",
+      "Helvetica Neue",
+      "Marker Felt",
+      "Optima",
+      "Palatino",
+      "Times New Roman",
+      "Trebuchet MS",
+      "Verdana"
+    ],
+    "detectionFonts": [
+      {
+        "family": "Helvetica",
+        "present": true
+      },
+      {
+        "family": "Helvetica Neue",
+        "present": true
+      },
+      {
+        "family": "Avenir",
+        "present": true
+      },
+      {
+        "family": "Roboto",
+        "present": false
+      },
+      {
+        "family": "Segoe UI",
+        "present": false
+      }
+    ]
+  },
+  "mediaDevices": [
+    {
+      "kind": "audioinput",
+      "label": "Default - Microphone (Built-in)",
+      "deviceId": "1b29f0a559b60474bba4f08e1ff83a004138aff2bbf03fdec6d9409d876b0917",
+      "groupId": "7ca687ea034e52670c82f75a91951c4090c173e867200c5fdf83f284a65d5c4a"
+    },
+    {
+      "kind": "audiooutput",
+      "label": "Default - Speakers (Built-in)",
+      "deviceId": "ae1151f4dd7147478e9fb444df9d5c220533f083dcf0e9df2c07b00298038d6e",
+      "groupId": "7ca687ea034e52670c82f75a91951c4090c173e867200c5fdf83f284a65d5c4a"
+    },
+    {
+      "kind": "videoinput",
+      "label": "Default - Camera (Built-in)",
+      "deviceId": "808b57abc4584aec969f2babcdc7ac465a596c566852f88b7481887947e44568",
+      "groupId": "8bc9f8f156e7a7e12bee6809e43c392aa42e874d38ed858231afb6021d8ed9fc"
+    }
+  ],
+  "speechVoices": [
+    {
+      "name": "Samantha",
+      "lang": "en-US",
+      "localService": true,
+      "default": true,
+      "voiceURI": "Samantha"
+    },
+    {
+      "name": "Alex",
+      "lang": "en-US",
+      "localService": true,
+      "default": false,
+      "voiceURI": "Alex"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "notifications",
+      "state": "prompt"
+    },
+    {
+      "name": "geolocation",
+      "state": "prompt"
+    },
+    {
+      "name": "camera",
+      "state": "prompt"
+    },
+    {
+      "name": "microphone",
+      "state": "prompt"
+    },
+    {
+      "name": "persistent-storage",
+      "state": "prompt"
+    }
+  ],
+  "geolocation": {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "accuracy": 24.5,
+    "altitude": null,
+    "altitudeAccuracy": null,
+    "heading": null,
+    "speed": null
+  },
+  "battery": {
+    "charging": false,
+    "chargingTime": null,
+    "dischargingTime": 12600,
+    "level": 0.83
+  },
+  "webrtc": {
+    "iceCandidatePolicy": "default",
+    "forceRelay": false,
+    "mangleSDP": true,
+    "fakeLocalIP": "192.168.18.119"
+  },
+  "canvas": {
+    "noiseSeed": 1787017,
+    "noiseStrength": 1
+  },
+  "audio": {
+    "noiseSeed": 1787018,
+    "sampleRate": 48000,
+    "noiseStrength": 0.0001
+  },
+  "math": {
+    "performanceNowResolutionMs": 0.0001
+  },
+  "tls": {
+    "clientHelloId": "HelloSafari_16_0",
+    "ja3": "d04de13cc41b7e125cc836139973db40",
+    "ja3Full": "771,4865-4866-4867-49196-49195-52393-49200-49199-52392-49162-49161-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-51-45-43-21,29-23-24,0",
+    "ja4": "t13d1614h2_d1aea835e6f4_4a2edf8d6c84",
+    "cipherSuites": [
+      4865,
+      4866,
+      4867,
+      49196,
+      49195,
+      52393,
+      49200,
+      49199,
+      52392,
+      49162,
+      49161,
+      49171,
+      49172,
+      156,
+      157,
+      47,
+      53
+    ],
+    "extensions": [
+      0,
+      23,
+      65281,
+      10,
+      11,
+      35,
+      16,
+      5,
+      13,
+      51,
+      45,
+      43,
+      21
+    ],
+    "curves": [
+      29,
+      23,
+      24
+    ],
+    "signatureAlgorithms": [
+      0
+    ],
+    "alpn": [
+      "h2",
+      "http/1.1"
+    ]
+  },
+  "http2": {
+    "settings": [
+      {
+        "id": 1,
+        "value": 65536
+      },
+      {
+        "id": 3,
+        "value": 1000
+      },
+      {
+        "id": 5,
+        "value": 16384
+      },
+      {
+        "id": 7,
+        "value": 6291456
+      },
+      {
+        "id": 9,
+        "value": 15663105
+      },
+      {
+        "id": 11,
+        "value": 1
+      },
+      {
+        "id": 13,
+        "value": 0
+      }
+    ],
+    "windowUpdate": 15663105,
+    "headerOrder": [
+      "host",
+      "connection",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "cookie"
+    ],
+    "pseudoHeaderOrder": [
+      ":method",
+      ":authority",
+      ":scheme",
+      ":path"
+    ],
+    "priority": [
+      {
+        "streamId": 0,
+        "weight": 256,
+        "exclusive": false,
+        "depStreamId": 0
+      }
+    ]
+  },
+  "httpHeaders": {
+    "order": [
+      "host",
+      "connection",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "cookie"
+    ],
+    "casing": {
+      "host": "Host",
+      "connection": "Connection",
+      "sec-ch-ua": "Sec-CH-UA",
+      "sec-ch-ua-mobile": "Sec-CH-UA-Mobile",
+      "sec-ch-ua-platform": "Sec-CH-UA-Platform",
+      "upgrade-insecure-requests": "Upgrade-Insecure-Requests",
+      "user-agent": "User-Agent",
+      "accept": "Accept",
+      "sec-fetch-site": "Sec-Fetch-Site",
+      "sec-fetch-mode": "Sec-Fetch-Mode",
+      "sec-fetch-user": "Sec-Fetch-User",
+      "sec-fetch-dest": "Sec-Fetch-Dest",
+      "accept-encoding": "Accept-Encoding",
+      "accept-language": "Accept-Language",
+      "cookie": "Cookie"
+    }
+  },
+  "proxy": null,
+  "createdAt": "2026-08-12T11:00:00.000Z",
+  "updatedAt": "2026-08-12T11:00:00.000Z"
+}

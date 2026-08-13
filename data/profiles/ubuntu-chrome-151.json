@@ -1,0 +1,498 @@
+{
+  "id": "ubuntu-chrome-151",
+  "label": "Ubuntu 22.04 / Chrome 151",
+  "os": "linux",
+  "osVersion": "22.04",
+  "browser": "chrome",
+  "browserVersion": "151",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+  "platform": "Linux x86_64",
+  "userAgentData": {
+    "brands": [
+      {
+        "brand": "Google Chrome",
+        "version": "151"
+      },
+      {
+        "brand": "Chromium",
+        "version": "151"
+      },
+      {
+        "brand": "Not.A/Brand",
+        "version": "24"
+      }
+    ],
+    "mobile": false,
+    "platform": "Linux",
+    "architecture": "",
+    "bitness": "",
+    "model": "",
+    "platformVersion": "22.04",
+    "uaFullVersion": "151.0.0.0",
+    "fullVersionList": [
+      {
+        "brand": "Google Chrome",
+        "version": "151.0.0.0"
+      },
+      {
+        "brand": "Chromium",
+        "version": "151.0.0.0"
+      },
+      {
+        "brand": "Not.A/Brand",
+        "version": "24.0.0.0"
+      }
+    ],
+    "wow64": false
+  },
+  "languages": [
+    "en-US"
+  ],
+  "timezone": {
+    "id": "America/Denver",
+    "offsetMinutes": 360,
+    "locale": "en-US"
+  },
+  "screen": {
+    "width": 1920,
+    "height": 1080,
+    "availWidth": 1920,
+    "availHeight": 1040,
+    "colorDepth": 24,
+    "pixelDepth": 24,
+    "orientation": {
+      "angle": 0,
+      "type": "landscape-primary"
+    }
+  },
+  "window": {
+    "innerWidth": 1920,
+    "innerHeight": 960,
+    "outerWidth": 1920,
+    "outerHeight": 1080,
+    "devicePixelRatio": 1,
+    "screenX": 0,
+    "screenY": 0
+  },
+  "hardware": {
+    "hardwareConcurrency": 8,
+    "deviceMemory": 16
+  },
+  "navigator": {
+    "vendor": "Google Inc.",
+    "vendorSub": "",
+    "product": "Gecko",
+    "productSub": "20030107",
+    "appName": "Netscape",
+    "appCodeName": "Mozilla",
+    "appVersion": "(X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+    "cookieEnabled": true,
+    "doNotTrack": "1",
+    "maxTouchPoints": 0,
+    "pdfViewerEnabled": true,
+    "webdriver": false,
+    "connection": {
+      "effectiveType": "4g",
+      "downlink": 10,
+      "rtt": 50,
+      "saveData": false
+    },
+    "plugins": [
+      {
+        "name": "PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "Portable Document Format",
+        "mimeTypes": [
+          {
+            "type": "application/pdf",
+            "suffixes": "pdf",
+            "description": "Portable Document Format"
+          }
+        ]
+      },
+      {
+        "name": "Chrome PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      },
+      {
+        "name": "Chromium PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      },
+      {
+        "name": "Microsoft Edge PDF Viewer",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      },
+      {
+        "name": "WebKit built-in PDF",
+        "filename": "internal-pdf-viewer",
+        "description": "",
+        "mimeTypes": []
+      }
+    ],
+    "mimeTypes": [
+      {
+        "type": "application/pdf",
+        "suffixes": "pdf",
+        "description": "Portable Document Format"
+      }
+    ]
+  },
+  "gpu": {
+    "vendor": "Google Inc. (AMD)",
+    "renderer": "ANGLE (AMD, AMD Radeon RX 6700 XT, OpenGL 4.6)",
+    "unmaskedVendor": "Google Inc. (AMD)",
+    "unmaskedRenderer": "ANGLE (AMD, AMD Radeon RX 6700 XT, OpenGL 4.6)",
+    "maxTextureSize": 16384,
+    "maxViewportDims": [
+      16384,
+      16384
+    ],
+    "maxRenderBufferSize": 16384,
+    "maxVertexAttribs": 16,
+    "maxVaryingVectors": 30,
+    "maxVertexUniformVectors": 4096,
+    "maxFragmentUniformVectors": 1024,
+    "aliasedLineWidthRange": [
+      1,
+      1
+    ],
+    "aliasedPointSizeRange": [
+      1,
+      1024
+    ],
+    "maxCombinedTextureImageUnits": 32,
+    "maxCubeMapTextureSize": 16384,
+    "maxTextureImageUnits": 16,
+    "shadingLanguageVersion": "WebGL GLSL ES 1.0 (OpenGL ES Shading Language, WebGL Specification)",
+    "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+    "antialias": true,
+    "extensions": [
+      "ANGLE_instanced_arrays",
+      "EXT_blend_minmax",
+      "EXT_color_buffer_half_float",
+      "EXT_disjoint_timer_query",
+      "EXT_float_blend",
+      "EXT_frag_depth",
+      "EXT_shader_texture_lod",
+      "EXT_texture_compression_bptc",
+      "EXT_texture_compression_rgtc",
+      "EXT_texture_filter_anisotropic",
+      "EXT_sRGB",
+      "OES_element_index_uint",
+      "OES_fbo_render_mipmap",
+      "OES_standard_derivatives",
+      "OES_texture_float",
+      "OES_texture_float_linear",
+      "OES_texture_half_float",
+      "OES_texture_half_float_linear",
+      "OES_vertex_array_object",
+      "WEBGL_color_buffer_float",
+      "WEBGL_compressed_texture_s3tc",
+      "WEBGL_compressed_texture_s3tc_srgb",
+      "WEBGL_debug_renderer_info",
+      "WEBGL_debug_shaders",
+      "WEBGL_depth_texture",
+      "WEBGL_draw_buffers",
+      "WEBGL_lose_context",
+      "WEBGL_multi_draw"
+    ]
+  },
+  "fonts": {
+    "fonts": [
+      "Bitstream Vera Sans",
+      "Cantarell",
+      "DejaVu Sans",
+      "DejaVu Sans Mono",
+      "DejaVu Serif",
+      "FreeMono",
+      "FreeSans",
+      "FreeSerif",
+      "Liberation Mono",
+      "Liberation Sans",
+      "Liberation Serif",
+      "Nimbus Sans",
+      "Nimbus Sans Mono",
+      "Nimbus Roman",
+      "Ubuntu",
+      "Ubuntu Mono"
+    ],
+    "detectionFonts": [
+      {
+        "family": "DejaVu Sans",
+        "present": true
+      },
+      {
+        "family": "Liberation Sans",
+        "present": true
+      },
+      {
+        "family": "Ubuntu",
+        "present": true
+      },
+      {
+        "family": "Segoe UI",
+        "present": false
+      },
+      {
+        "family": "Calibri",
+        "present": false
+      },
+      {
+        "family": "Arial",
+        "present": false
+      }
+    ]
+  },
+  "mediaDevices": [
+    {
+      "kind": "audioinput",
+      "label": "Default - Microphone (Built-in)",
+      "deviceId": "0f82818446ba9631f1ae394b797bb3fb546176034066fe81216b556d306613ff",
+      "groupId": "f897078f06eb8768cd2d739e7c4349aff44b7d1e259184dd42d99c3fea5d4076"
+    },
+    {
+      "kind": "audiooutput",
+      "label": "Default - Speakers (Built-in)",
+      "deviceId": "a532f3cbed2a49184a2edf948a7e525fb7d511b98192e6675df2a1406d74d06b",
+      "groupId": "f897078f06eb8768cd2d739e7c4349aff44b7d1e259184dd42d99c3fea5d4076"
+    },
+    {
+      "kind": "videoinput",
+      "label": "Default - Camera (Built-in)",
+      "deviceId": "cadba941ff7959e63f6c38e8d4ebfd4df43fd3b70d375cb06b8f36fa8ed851b4",
+      "groupId": "04231b37f3a2923707a5d194cd8548c377a17719520d749601289296e0a6cc51"
+    }
+  ],
+  "speechVoices": [
+    {
+      "name": "espeak",
+      "lang": "en-US",
+      "localService": true,
+      "default": true,
+      "voiceURI": "espeak"
+    },
+    {
+      "name": "festival",
+      "lang": "en-US",
+      "localService": true,
+      "default": false,
+      "voiceURI": "festival"
+    }
+  ],
+  "permissions": [
+    {
+      "name": "notifications",
+      "state": "prompt"
+    },
+    {
+      "name": "geolocation",
+      "state": "prompt"
+    },
+    {
+      "name": "camera",
+      "state": "prompt"
+    },
+    {
+      "name": "microphone",
+      "state": "prompt"
+    },
+    {
+      "name": "persistent-storage",
+      "state": "prompt"
+    }
+  ],
+  "geolocation": {
+    "latitude": 39.7392,
+    "longitude": -104.9903,
+    "accuracy": 24.5,
+    "altitude": null,
+    "altitudeAccuracy": null,
+    "heading": null,
+    "speed": null
+  },
+  "battery": {
+    "charging": false,
+    "chargingTime": null,
+    "dischargingTime": 12600,
+    "level": 0.83
+  },
+  "webrtc": {
+    "iceCandidatePolicy": "default",
+    "forceRelay": false,
+    "mangleSDP": true,
+    "fakeLocalIP": "192.168.18.119"
+  },
+  "canvas": {
+    "noiseSeed": 1554017,
+    "noiseStrength": 1
+  },
+  "audio": {
+    "noiseSeed": 1554018,
+    "sampleRate": 48000,
+    "noiseStrength": 0.0001
+  },
+  "math": {
+    "performanceNowResolutionMs": 0.0001
+  },
+  "tls": {
+    "clientHelloId": "HelloChrome_120",
+    "ja3": "e1d8b04eeb8ef3954ec4f49267a783ef",
+    "ja3Full": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513,29-23-24,0",
+    "ja4": "t13d1516h2_8daaf6152771_b0da82dd1658",
+    "cipherSuites": [
+      4865,
+      4866,
+      4867,
+      49195,
+      49199,
+      49196,
+      49200,
+      52393,
+      52392,
+      49171,
+      49172,
+      156,
+      157,
+      47,
+      53
+    ],
+    "extensions": [
+      0,
+      23,
+      65281,
+      10,
+      11,
+      35,
+      16,
+      5,
+      13,
+      18,
+      51,
+      45,
+      43,
+      27,
+      17513
+    ],
+    "curves": [
+      29,
+      23,
+      24
+    ],
+    "signatureAlgorithms": [
+      0
+    ],
+    "alpn": [
+      "h2",
+      "http/1.1"
+    ]
+  },
+  "http2": {
+    "settings": [
+      {
+        "id": 1,
+        "value": 65536
+      },
+      {
+        "id": 3,
+        "value": 1000
+      },
+      {
+        "id": 5,
+        "value": 16384
+      },
+      {
+        "id": 7,
+        "value": 6291456
+      },
+      {
+        "id": 9,
+        "value": 15663105
+      },
+      {
+        "id": 11,
+        "value": 1
+      },
+      {
+        "id": 13,
+        "value": 0
+      }
+    ],
+    "windowUpdate": 15663105,
+    "headerOrder": [
+      "host",
+      "connection",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "cookie"
+    ],
+    "pseudoHeaderOrder": [
+      ":method",
+      ":authority",
+      ":scheme",
+      ":path"
+    ],
+    "priority": [
+      {
+        "streamId": 0,
+        "weight": 256,
+        "exclusive": false,
+        "depStreamId": 0
+      }
+    ]
+  },
+  "httpHeaders": {
+    "order": [
+      "host",
+      "connection",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "cookie"
+    ],
+    "casing": {
+      "host": "Host",
+      "connection": "Connection",
+      "sec-ch-ua": "Sec-CH-UA",
+      "sec-ch-ua-mobile": "Sec-CH-UA-Mobile",
+      "sec-ch-ua-platform": "Sec-CH-UA-Platform",
+      "upgrade-insecure-requests": "Upgrade-Insecure-Requests",
+      "user-agent": "User-Agent",
+      "accept": "Accept",
+      "sec-fetch-site": "Sec-Fetch-Site",
+      "sec-fetch-mode": "Sec-Fetch-Mode",
+      "sec-fetch-user": "Sec-Fetch-User",
+      "sec-fetch-dest": "Sec-Fetch-Dest",
+      "accept-encoding": "Accept-Encoding",
+      "accept-language": "Accept-Language",
+      "cookie": "Cookie"
+    }
+  },
+  "proxy": null,
+  "createdAt": "2026-08-12T11:00:00.000Z",
+  "updatedAt": "2026-08-12T11:00:00.000Z"
+}
