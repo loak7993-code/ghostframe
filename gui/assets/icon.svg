@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3aa7ff"/>
+      <stop offset="1" stop-color="#7a5cff"/>
+    </linearGradient>
+    <linearGradient id="ghost" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8f6ff"/>
+      <stop offset="1" stop-color="#9fd8ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="40" ry="40" fill="#0d0f13"/>
+  <rect x="8" y="8" width="240" height="240" rx="40" ry="40" fill="none" stroke="url(#frame)" stroke-width="10"/>
+  <!-- inner dashed "fingerprint frame" -->
+  <rect x="36" y="36" width="184" height="184" rx="26" ry="26" fill="none" stroke="#2b3138" stroke-width="3" stroke-dasharray="10 8"/>
+  <!-- ghost body -->
+  <path fill="url(#ghost)" d="M128 72c-30 0-52 24-52 56v58c0 8 5 10 11 6l11-8c4-3 9-3 12 1l10 12c3 4 8 4 11 0l10-12c3-4 8-4 12-1l11 8c6 4 11 2 11-6v-58c0-32-22-56-52-56z"/>
+  <!-- eyes -->
+  <ellipse cx="108" cy="118" rx="9" ry="14" fill="#0d0f13"/>
+  <ellipse cx="148" cy="118" rx="9" ry="14" fill="#0d0f13"/>
+  <ellipse cx="110" cy="114" rx="3" ry="5" fill="#8fd4ff"/>
+  <ellipse cx="150" cy="114" rx="3" ry="5" fill="#8fd4ff"/>
+</svg>

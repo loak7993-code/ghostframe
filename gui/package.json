@@ -1,0 +1,10 @@
+{
+  "name": "ghostframe-gui",
+  "version": "0.1.0",
+  "description": "GhostFrame Electron GUI — profile manager and fingerprint verifier",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  }
+}
