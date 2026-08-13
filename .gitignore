@@ -38,3 +38,9 @@ mobile/ghostframe.apk
 .vscode/
 *.swp
 *.swo
+
+# --- packaging (electron-builder stage + outputs + browsers) ------------------
+packaging/app/
+packaging/dist/
+packaging/node_modules/
+packaging/browsers/

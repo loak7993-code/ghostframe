@@ -1,0 +1,14 @@
+{
+  "name": "ghostframe-package",
+  "private": true,
+  "version": "0.1.0",
+  "description": "GhostFrame — coherent-fingerprint browser platform",
+  "scripts": {
+    "package:linux": "node stage.mjs && electron-builder --linux AppImage",
+    "package:dir": "node stage.mjs && electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.6"
+  }
+}

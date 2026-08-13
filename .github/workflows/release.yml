@@ -1,0 +1,77 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
+      - run: npm ci --prefix packaging
+
+  build-windows:
+    needs: bundle
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install chromium
+      - run: node packaging/stage.mjs
+      - run: npx electron-builder --win nsis portable --projectDir packaging
+      - name: Upload artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            packaging/dist/appimage/GhostFrame-Setup-*.exe
+            packaging/dist/appimage/GhostFrame-Setup-*.msi
+            packaging/dist/appimage/GhostFrame-Setup-*.zip
+
+  build-macos:
+    needs: bundle
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install chromium
+      - run: node packaging/stage.mjs
+      - run: npx electron-builder --mac dmg zip --projectDir packaging
+      - name: Upload artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            packaging/dist/appimage/GhostFrame-*.dmg
+            packaging/dist/appimage/GhostFrame-*.zip
+
+  build-linux:
+    needs: bundle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: npm }
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install chromium
+      - run: node packaging/stage.mjs
+      - run: npx electron-builder --linux AppImage deb --projectDir packaging
+      - name: Upload artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            packaging/dist/appimage/GhostFrame-*.AppImage
+            packaging/dist/appimage/GhostFrame-*.deb

@@ -4,13 +4,46 @@ const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
-const { spawn } = require('child_process');
 
 // Project root resolved relative to this file — the GUI lives inside the repo at gui/.
 const ROOT = path.resolve(__dirname, '..');
-const PROFILES_DIR = path.join(ROOT, 'data', 'profiles');
-const TSX = path.join(ROOT, 'node_modules', '.bin', 'tsx');
-const CLI_ENTRY = 'src/cli/index.ts';
+let PROFILES_DIR = path.join(ROOT, 'data', 'profiles');
+
+// Packaged app: install dir is read-only (resources/app.asar). Everything writable
+// relocates into OS user-data; bundled chromium + stock profiles ride along as resources.
+function configurePackagedPaths() {
+  if (!app.isPackaged) return;
+  const resources = process.resourcesPath;
+  const userData = app.getPath('userData');
+
+  // bundled browsers (extraResources/browsers) — playwright honors this path
+  process.env.PLAYWRIGHT_BROWSERS_PATH = path.join(resources, 'browsers');
+
+  // stock profiles → userData copy (first run)
+  const profilesDest = path.join(userData, 'profiles');
+  if (!fs.existsSync(profilesDest)) {
+    try { fs.cpSync(path.join(resources, 'extra-profiles'), profilesDest, { recursive: true }); } catch {}
+  }
+  if (fs.existsSync(profilesDest)) process.env.GHOSTFRAME_PROFILES_DIR = profilesDest;
+
+  // writable state → userData
+  process.env.GHOSTFRAME_STATE_DIR = path.join(userData, 'profiles-state');
+  process.env.GHOSTFRAME_DATA_ROOT = ROOT;
+  process.env.GHOSTFRAME_PROJECT_ROOT = ROOT;
+  PROFILES_DIR = process.env.GHOSTFRAME_PROFILES_DIR || PROFILES_DIR;
+}
+configurePackagedPaths();
+
+// In-process launcher access: load the esbuild-bundled CommonJS launcher.
+// Pre-built at packaging time (esbuild --bundle), so no TypeScript runtime is needed
+// and it works cleanly from inside an asar archive.
+let _launcher = null;
+function loadLauncher() {
+  if (!_launcher) {
+    _launcher = require(path.join(ROOT, 'dist', 'launcher.cjs'));
+  }
+  return _launcher;
+}
 
 // Canonical app identity — drives WM_CLASS + userData dir; must match the .desktop StartupWMClass.
 app.setName('GhostFrame');
@@ -98,10 +131,6 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  // production sanity: tsx must exist for launch/fingerprint IPC
-  if (!fs.existsSync(TSX)) {
-    dialog.showErrorBox('GhostFrame', 'Missing tsx runtime. Run `npm install` in ' + ROOT);
-  }
   createWindow();
   app.on('activate', () => { if (BrowserWindow.getAllWindows().length === 0) createWindow(); });
 });
@@ -199,9 +228,15 @@ ipcMain.handle('profiles:create', async (event, data) => {
 
 ipcMain.handle('profiles:launch', async (event, id) => {
   if (!isValidId(id)) throw new Error('invalid profile id');
-  const child = spawn(TSX, [CLI_ENTRY, 'launch', id], { cwd: ROOT, detached: true, stdio: 'ignore', env: { ...process.env } });
-  child.unref();
-  return { ok: true, pid: child.pid };
+  const profileFile = path.join(PROFILES_DIR, id + '.json');
+  if (!fs.existsSync(profileFile)) throw new Error('profile not found');
+  const profile = JSON.parse(fs.readFileSync(profileFile, 'utf8'));
+  const launcher = loadLauncher();
+  // Launch a *headed* browser — the user wants to interact with it from this machine.
+  const { launchProfile } = launcher;
+  const result = await launchProfile(profile, { headless: false, useGhostProxy: false });
+  // Track open contexts for clean close; leave them running until the user closes them.
+  return { ok: true, pid: process.pid };
 });
 
 ipcMain.handle('profiles:fingerprint', async (event, id) => {
@@ -211,27 +246,24 @@ ipcMain.handle('profiles:fingerprint', async (event, id) => {
     const target = win && !win.isDestroyed() ? win : mainWindow;
     if (target && !target.isDestroyed()) target.webContents.send('fingerprint:progress', { id, stage, message });
   };
+  const profileFile = path.join(PROFILES_DIR, id + '.json');
+  if (!fs.existsSync(profileFile)) throw new Error('profile not found');
+  const profile = JSON.parse(fs.readFileSync(profileFile, 'utf8'));
   send('start', 'Launching headless browser to read fingerprint…');
-  return new Promise((resolve, reject) => {
-    const child = spawn(TSX, [CLI_ENTRY, 'fingerprint', id], { cwd: ROOT, stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env } });
-    let stdout = '';
-    let stderr = '';
-    let settled = false;
-    const killer = setTimeout(() => { if (!settled) { settled = true; try { child.kill('SIGKILL'); } catch (e) {} reject(new Error('fingerprint timed out after 90s')); } }, 90000);
-    child.stdout.on('data', (d) => { const s = d.toString(); stdout += s; for (const line of s.split(/\r?\n/)) if (line.trim()) send('stdout', line); });
-    child.stderr.on('data', (d) => { const s = d.toString(); stderr += s; for (const line of s.split(/\r?\n/)) if (line.trim()) send('progress', line); });
-    child.on('error', (err) => { if (!settled) { settled = true; clearTimeout(killer); reject(err); } });
-    child.on('close', (code) => {
-      if (settled) return;
-      settled = true;
-      clearTimeout(killer);
-      if (code !== 0) return reject(new Error('fingerprint exited with code ' + code + (stderr ? '\n' + stderr.slice(-1500) : '')));
-      const parsed = parseReadback(stdout);
-      if (!parsed) return reject(new Error('failed to parse FingerprintReadback JSON' + (stderr ? '\n' + stderr.slice(-1500) : '')));
-      send('done', 'Fingerprint read.');
-      resolve(parsed);
-    });
-  });
+  const launcher = loadLauncher();
+  const { launchProfile, readFingerprint, close } = launcher;
+  const t0 = Date.now();
+  let session = null;
+  try {
+    session = await launchProfile(profile, { headless: true, useGhostProxy: false });
+    const rb = await readFingerprint(session.context, profile);
+    send('done', 'Fingerprint read.');
+    return rb;
+  } catch (e) {
+    throw new Error(String(e && e.message ? e.message : e));
+  } finally {
+    if (session) await close(session.context).catch(() => {});
+  }
 });
 
 process.on('uncaughtException', (err) => {

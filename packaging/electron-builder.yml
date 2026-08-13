@@ -1,0 +1,46 @@
+appId: com.ghostframe.app
+productName: GhostFrame
+asar: true
+asarUnpack:
+  - dist/launcher.cjs
+  - dist/inject.js
+directories:
+  output: dist/appimage
+  buildResources: resources
+files:
+  - package.json
+  - gui/**
+  - dist/launcher.cjs
+  - dist/inject.js
+  - browsers.json
+extraResources:
+  - from: ../data/profiles
+    to: extra-profiles
+  - from: app/browsers
+    to: browsers
+linux:
+  target: AppImage
+  category: Network
+  icon: resources/icon.png
+  artifactName: GhostFrame-${arch}.${ext}
+win:
+  target:
+    - nsis
+    - portable
+  icon: resources/icon.png
+  artifactName: GhostFrame-Setup-${arch}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: GhostFrame
+mac:
+  target:
+    - dmg
+    - zip
+  icon: resources/icon.png
+  artifactName: GhostFrame-${arch}.${ext}
+  category: public.app-category.utilities
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  identity: null
