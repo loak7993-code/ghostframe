@@ -4,7 +4,7 @@
   "description": "GhostFrame anti-detect browser platform",
   "type": "module",
   "scripts": {
-    "build": "node scripts/gen-worker-embed.mjs && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.core.js && node scripts/gen-worker-embed.mjs dist/inject.core.js && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.js",
+    "build": "tsc --noEmit && node scripts/gen-worker-embed.mjs && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.core.js && node scripts/gen-worker-embed.mjs dist/inject.core.js && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.js && esbuild src/browser/launcher.ts --bundle --platform=node --format=cjs --outfile=dist/launcher.cjs --external:electron --external:chromium-bidi --external:chromium-bidi/lib/cjs/cdp/CdpConnection && esbuild src/api/server.ts --bundle --platform=node --format=cjs --outfile=dist/api.cjs --external:electron --external:chromium-bidi --external:chromium-bidi/lib/cjs/cdp/CdpConnection",
     "test": "vitest run",
     "validate-profiles": "tsx scripts/validate-profiles.ts",
     "launch": "tsx src/cli/index.ts",
@@ -16,7 +16,8 @@
   "dependencies": {
     "esbuild": "^0.24.0",
     "fastify": "^5.0.0",
-    "playwright": "^1.49.0"
+    "playwright": "^1.49.0",
+    "tsx": "^4.19.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -24,7 +25,6 @@
     "electron": "^33.0.0",
     "eslint": "^10.8.1",
     "jsdom": "^30.0.1",
-    "tsx": "^4.19.0",
     "typescript": "^5.6.0",
     "typescript-eslint": "^8.67.0",
     "vitest": "^2.1.0"
