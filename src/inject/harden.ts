@@ -99,7 +99,7 @@ export function wrapNative(
   nativeName: string,
 ): AnyFn {
   // capture original to keep arity + call-through default
-  let origLen = 0;
+  let origLen: number;
   try {
     const orig = (obj as Record<string, unknown>)[prop];
     origLen = typeof orig === 'function' ? (orig as AnyFn).length : 0;

@@ -14,7 +14,6 @@ export function spoofChromeObject(profile: DeviceProfile): void {
   const noop = hardenFn(function (): void {}, 'noop');
   const retUndefined = hardenFn(function (): undefined { return undefined; }, '');
   const retFalse = hardenFn(function (): boolean { return false; }, '');
-  const retZero = hardenFn(function (): number { return 0; }, '');
 
   const chromeObj: any = {};
   chromeObj.app = {

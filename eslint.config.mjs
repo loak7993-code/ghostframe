@@ -30,6 +30,6 @@ export default [
     },
   },
   {
-    ignores: ['dist/**', 'node_modules/**', 'netlayer/**', 'gui/**', 'profiles-state/**', 'data/**'],
+    ignores: ['dist/**', 'node_modules/**', 'netlayer/**', 'gui/**', 'profiles-state/**', 'data/**', 'mobile/**', 'packaging/**', 'src/inject/worker-source.ts', '**/gen-worker-embed.mjs', '*.cjs'],
   },
 ];
