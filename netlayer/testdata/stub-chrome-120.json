@@ -1,0 +1,176 @@
+{
+  "id": "stub-chrome-120",
+  "label": "Stub Chrome 120 (netlayer self-test fixture)",
+  "os": "windows",
+  "osVersion": "10.0.0",
+  "browser": "chrome",
+  "browserVersion": "120.0.6099.110",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "platform": "Win32",
+  "languages": [
+    "en-US",
+    "en"
+  ],
+  "timezone": {
+    "id": "America/New_York",
+    "offsetMinutes": -300,
+    "locale": "en-US"
+  },
+  "tls": {
+    "clientHelloId": "HelloChrome_120",
+    "ja3": "cd08e31494f9531f560d93c1e91f798c",
+    "ja3Full": "771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,0-23-65281-10-11-35-16-5-13-18-51-45-43-27-17513,29-23-24,0",
+    "ja4": "t13d1715h2_5b57614c22b0_3fef5e20d98d",
+    "cipherSuites": [
+      4865,
+      4866,
+      4867,
+      49195,
+      49199,
+      49196,
+      49200,
+      52393,
+      52392,
+      49171,
+      49172,
+      156,
+      157,
+      47,
+      53
+    ],
+    "extensions": [
+      0,
+      23,
+      65281,
+      10,
+      11,
+      35,
+      16,
+      5,
+      13,
+      18,
+      51,
+      45,
+      43,
+      27,
+      17513
+    ],
+    "curves": [
+      29,
+      23,
+      24
+    ],
+    "signatureAlgorithms": [
+      1027,
+      2052,
+      1025,
+      1281,
+      2055,
+      2057,
+      2056,
+      1280,
+      2053,
+      2054,
+      1024,
+      1537
+    ],
+    "alpn": [
+      "h2",
+      "http/1.1"
+    ]
+  },
+  "http2": {
+    "settings": [
+      {
+        "id": 1,
+        "value": 65536
+      },
+      {
+        "id": 2,
+        "value": 0
+      },
+      {
+        "id": 3,
+        "value": 1000
+      },
+      {
+        "id": 4,
+        "value": 6291456
+      }
+    ],
+    "windowUpdate": 15663105,
+    "headerOrder": [
+      ":method",
+      ":authority",
+      ":scheme",
+      ":path",
+      "accept",
+      "accept-encoding",
+      "accept-language",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "sec-fetch-dest",
+      "sec-fetch-mode",
+      "sec-fetch-site",
+      "sec-fetch-user",
+      "upgrade-insecure-requests",
+      "user-agent"
+    ],
+    "pseudoHeaderOrder": [
+      ":method",
+      ":authority",
+      ":scheme",
+      ":path"
+    ],
+    "priority": [
+      {
+        "streamId": 0,
+        "weight": 256,
+        "exclusive": false,
+        "depStreamId": 0
+      }
+    ]
+  },
+  "httpHeaders": {
+    "order": [
+      "Host",
+      "Connection",
+      "Content-Length",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "Upgrade-Insecure-Requests",
+      "User-Agent",
+      "Accept",
+      "Sec-Fetch-Site",
+      "Sec-Fetch-Mode",
+      "Sec-Fetch-User",
+      "Sec-Fetch-Dest",
+      "Accept-Encoding",
+      "Accept-Language",
+      "Cookie"
+    ],
+    "casing": {
+      "Host": "Host",
+      "Connection": "Connection",
+      "Content-Length": "Content-Length",
+      "sec-ch-ua": "sec-ch-ua",
+      "sec-ch-ua-mobile": "sec-ch-ua-mobile",
+      "sec-ch-ua-platform": "sec-ch-ua-platform",
+      "Upgrade-Insecure-Requests": "Upgrade-Insecure-Requests",
+      "User-Agent": "User-Agent",
+      "Accept": "Accept",
+      "Sec-Fetch-Site": "Sec-Fetch-Site",
+      "Sec-Fetch-Mode": "Sec-Fetch-Mode",
+      "Sec-Fetch-User": "Sec-Fetch-User",
+      "Sec-Fetch-Dest": "Sec-Fetch-Dest",
+      "Accept-Encoding": "Accept-Encoding",
+      "Accept-Language": "Accept-Language",
+      "Cookie": "Cookie"
+    }
+  },
+  "proxy": null,
+  "createdAt": "2026-08-12T00:00:00.000Z",
+  "updatedAt": "2026-08-12T00:00:00.000Z"
+}
