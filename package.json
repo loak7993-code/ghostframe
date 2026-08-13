@@ -1,0 +1,32 @@
+{
+  "name": "ghostframe",
+  "version": "0.1.0",
+  "description": "GhostFrame anti-detect browser platform",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/gen-worker-embed.mjs && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.core.js && node scripts/gen-worker-embed.mjs dist/inject.core.js && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.js",
+    "test": "vitest run",
+    "validate-profiles": "tsx scripts/validate-profiles.ts",
+    "launch": "tsx src/cli/index.ts",
+    "api": "tsx src/api/server.ts",
+    "gui": "electron gui/",
+    "lint": "eslint .",
+    "verify": "npm run build && npm test && npm run validate-profiles && npm run lint"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "fastify": "^5.0.0",
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "electron": "^33.0.0",
+    "eslint": "^10.8.1",
+    "jsdom": "^30.0.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^2.1.0"
+  }
+}

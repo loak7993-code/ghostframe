@@ -1,0 +1,40 @@
+# --- dependencies ----------------------------------------------------------
+node_modules/
+
+# --- build outputs ---------------------------------------------------------
+dist/
+*.tsbuildinfo
+
+# --- runtime state + secrets (never committed) ------------------------------
+profiles-state/
+data/proxies.txt
+*.local
+.env
+.env.*
+
+# --- netlayer (Go) build artifacts ------------------------------------------
+netlayer/ghostproxy
+netlayer/netlayer
+netlayer/*.test
+netlayer/*.out
+
+# --- Electron GUI -----------------------------------------------------------
+gui/node_modules/
+*.log
+
+# --- mobile (Capacitor) ------------------------------------------------------
+mobile/node_modules/
+mobile/android/.gradle/
+mobile/android/app/build/
+mobile/android/build/
+mobile/android/local.properties
+mobile/android/gradle/
+mobile/android/gradle-wrapper.jar
+mobile/ghostframe.apk
+
+# --- editors / OS ------------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
