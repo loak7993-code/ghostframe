@@ -4,7 +4,7 @@
   "description": "GhostFrame anti-detect browser platform",
   "type": "module",
   "scripts": {
-    "build": "tsc --noEmit && node scripts/gen-worker-embed.mjs && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.core.js && node scripts/gen-worker-embed.mjs dist/inject.core.js && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.js && esbuild src/browser/launcher.ts --bundle --platform=node --format=cjs --outfile=dist/launcher.cjs --external:electron --external:chromium-bidi --external:chromium-bidi/lib/cjs/cdp/CdpConnection && esbuild src/api/server.ts --bundle --platform=node --format=cjs --outfile=dist/api.cjs --external:electron --external:chromium-bidi --external:chromium-bidi/lib/cjs/cdp/CdpConnection",
+    "build": "tsc --noEmit && node scripts/gen-worker-embed.mjs && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.core.js && node scripts/gen-worker-embed.mjs dist/inject.core.js && esbuild src/inject/index.ts --bundle --minify --format=iife --outfile=dist/inject.js && esbuild src/browser/launcher.ts --bundle --platform=node --format=cjs --outfile=dist/launcher.cjs --external:electron --external:chromium-bidi --external:chromium-bidi/lib/cjs/cdp/CdpConnection --external:fsevents --loader:.node=empty && esbuild src/api/server.ts --bundle --platform=node --format=cjs --outfile=dist/api.cjs --external:electron --external:chromium-bidi --external:chromium-bidi/lib/cjs/cdp/CdpConnection --external:fsevents --loader:.node=empty",
     "test": "vitest run",
     "validate-profiles": "tsx scripts/validate-profiles.ts",
     "launch": "tsx src/cli/index.ts",

@@ -8,7 +8,7 @@
     "package:dir": "node stage.mjs && electron-builder --dir"
   },
   "devDependencies": {
-    "electron": "^33.4.11",
+    "electron": "33.4.11",
     "electron-builder": "^25.1.6"
   }
 }
