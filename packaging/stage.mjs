@@ -59,7 +59,7 @@ fs.writeFileSync(join(APP, 'package.json'), JSON.stringify({
   version: '0.1.0',
   description: 'GhostFrame — coherent-fingerprint browser platform',
   homepage: 'https://github.com/loak7993-code/ghostframe',
-  author: 'GhostFrame contributors',
+  author: { name: 'GhostFrame contributors', email: 'ghostframe@proton.me' },
   license: 'MIT',
   main: 'gui/main.js',
   dependencies: {},
