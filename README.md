@@ -30,7 +30,24 @@ GhostFrame drives **every** fingerprint surface from a single coherent device pr
 
 Three faces: a CLI, a REST API, an Electron desktop app — plus an Android companion app.
 
-## Quickstart
+## Download (no building)
+
+Pre-built desktop installers live in [Releases](https://github.com/loak7993-code/ghostframe/releases):
+
+| Platform | Artifact | Install |
+|---|---|---|
+| **Windows** | [`GhostFrame-Setup-x64.exe`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-Setup-x64.exe) | double-click, pick a folder, done |
+| **macOS** (Apple Silicon) | [`GhostFrame-arm64.dmg`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-arm64.dmg) | drag to /Applications |
+| **macOS** (Apple Silicon, plain) | [`GhostFrame-arm64.zip`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-arm64.zip) | unzip & run |
+| **Linux** (any) | [`GhostFrame-x86_64.AppImage`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-x86_64.AppImage) | `chmod +x && ./GhostFrame-x86_64.AppImage` |
+| **Linux** (Debian/Ubuntu) | [`GhostFrame-amd64.deb`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-amd64.deb) | `sudo dpkg -i GhostFrame-amd64.deb` |
+| **Android** | companion client source | `mobile/README.md` |
+
+> macOS note: the binaries are unsigned for now — the first run needs **right-click → Open** → Open (Gatekeeper), once. Windows may show a SmartScreen prompt on first run (click More info → Run anyway); signing is a TODO item on the roadmap.
+
+## Quickstart (from source)
+
+If you want to hack on it instead:
 
 ```bash
 npm install
