@@ -38,6 +38,7 @@ function msPlaywrightDir() {
     const la = process.env.LOCALAPPDATA || resolve(os.homedir(), 'AppData', 'Local');
     return resolve(la, 'ms-playwright');
   }
+  if (process.platform === 'darwin') return resolve(os.homedir(), 'Library', 'Caches', 'ms-playwright');
   return resolve(os.homedir(), '.cache', 'ms-playwright');
 }
 const browsersJson = JSON.parse(fs.readFileSync(join(ROOT, 'node_modules', 'playwright-core', 'browsers.json'), 'utf8'));
@@ -57,6 +58,8 @@ fs.writeFileSync(join(APP, 'package.json'), JSON.stringify({
   productName: 'GhostFrame',
   version: '0.1.0',
   description: 'GhostFrame — coherent-fingerprint browser platform',
+  homepage: 'https://github.com/loak7993-code/ghostframe',
+  author: 'GhostFrame contributors',
   license: 'MIT',
   main: 'gui/main.js',
   dependencies: {},
