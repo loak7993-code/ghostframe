@@ -30,20 +30,41 @@ GhostFrame drives **every** fingerprint surface from a single coherent device pr
 
 Three faces: a CLI, a REST API, an Electron desktop app — plus an Android companion app.
 
-## Download (no building)
+## Download
 
-Pre-built desktop installers live in [Releases](https://github.com/loak7993-code/ghostframe/releases):
+One file, no building, no dependencies — everything (browser included) ships inside:
 
-| Platform | Artifact | Install |
-|---|---|---|
-| **Windows** | [`GhostFrame-Setup-x64.exe`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-Setup-x64.exe) | double-click, pick a folder, done |
-| **macOS** (Apple Silicon) | [`GhostFrame-arm64.dmg`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-arm64.dmg) | drag to /Applications |
-| **macOS** (Apple Silicon, plain) | [`GhostFrame-arm64.zip`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-arm64.zip) | unzip & run |
-| **Linux** (any) | [`GhostFrame-x86_64.AppImage`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-x86_64.AppImage) | `chmod +x && ./GhostFrame-x86_64.AppImage` |
-| **Linux** (Debian/Ubuntu) | [`GhostFrame-amd64.deb`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-amd64.deb) | `sudo dpkg -i GhostFrame-amd64.deb` |
-| **Android** | companion client source | `mobile/README.md` |
+```bash
+# ┌── Linux (any distro)
+curl -LO https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-x86_64.AppImage
+chmod +x GhostFrame-x86_64.AppImage
+./GhostFrame-x86_64.AppImage
+```
 
-> macOS note: the binaries are unsigned for now — the first run needs **right-click → Open** → Open (Gatekeeper), once. Windows may show a SmartScreen prompt on first run (click More info → Run anyway); signing is a TODO item on the roadmap.
+```bash
+# ┌── Linux (Debian / Ubuntu / Mint)
+curl -LO https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-amd64.deb
+sudo apt install ./GhostFrame-amd64.deb
+ghostframe   # launch from the app menu or run this
+```
+
+```powershell
+# ┌── Windows
+#   Download & run:  GhostFrame-Setup-x64.exe   (link below)
+```
+👉 [`GhostFrame-Setup-x64.exe`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-Setup-x64.exe) — double-click, Next → Install → Launch.
+
+```posh
+# ┌── macOS (Apple Silicon)
+#   Same rule: choose the .dmg if you want it in /Applications, or the .zip if you just want to run it
+```
+👉 [`GhostFrame-arm64.dmg`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-arm64.dmg) — drag to Applications · [`GhostFrame-arm64.zip`](https://github.com/loak7993-code/ghostframe/releases/latest/download/GhostFrame-arm64.zip)
+
+> One-time notes:
+> • **macOS** — unsigned binary: first run is **right-click → Open** → **Open**. Afterwards it launches normally.
+> • **Windows** — unsigned binary: SmartScreen may pop — click **More info → Run anyway** (once).
+
+Browse everything (including older builds): [/releases](https://github.com/loak7993-code/ghostframe/releases)
 
 ## Quickstart (from source)
 
